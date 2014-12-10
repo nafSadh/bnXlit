@@ -1,0 +1,22 @@
+html, body {
+  margin: 0; border: 0; background: #f8f8f8;
+  color: #137;
+}
+body {text-align: center;}
+#content {display: inline-block;}
+#converter {padding: 8pt; background:#eee; text-align: left;}
+#converter hr {border: none; border-bottom: 1px solid #ccc;}
+.rowTitle {width:50pt; display: inline-block;}
+.rowField{width: 300pt; background: #f8f8f8;
+  border: 1px solid #ddd; display: inline-block; }
+.rowField, .rowTitle {
+  margin: 0; padding: 0 8pt;
+  height: 28pt; font-size: 16pt; line-height: 21pt; vertical-align: baseline;
+}
+#fullList {width: 382pt; display: inline-block;}
+.ref {display: inline-block; padding: 2pt 8pt; border: 1px solid #ddd;}
+.bn, .ipa {width: 15pt; display: inline-block; text-align: center;}
+.bn {color: darkgreen;} .ipa {color: steelblue;}
+footer{
+  margin: 16pt 0;
+}

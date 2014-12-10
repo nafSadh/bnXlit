@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5//EN">
+<html>
+<head>
+  <meta charset="utf-8"/>
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>bnIPA -- IPA for Bengali tool by nafSadh</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+  <script src="bnIPA.js"></script>
+  <script type="application/javascript">
+    $(document).ready(function () {
+      $("#bn").change(function(){
+        var bntx = $("#bn").val();
+        $("#ipa").text(bnIPA(bntx));
+      });
+      $("#getFull").click(function(){
+        $("#fullList").html(bnIPARef());
+        $("#getFull").text("Bengali->IPA reference")
+      });
+    });
+  </script>
+</head>
+<body align="center">
+<div id="content">
+  <h1><span style="color:#01796F">b</span><span style="color:#E11837">n</span><span style="color:#07C">IPA</span></h1>
+  <h2>handy tool to type <a href="http://en.wikipedia.org/wiki/Help:IPA_for_Bengali" title="International Phonetic Alphabet">IPA</a> of Bengali</h2>
+  <div id="converter">
+    <span class="rowTitle">বাংলা:</span>
+    <input id="bn" class="rowField"/><br/>
+    <span class="rowTitle">IPA:</span>
+    <span id="ipa" class="rowField"></span>
+    <br/><hr/>
+    Specials:্যা -> @,  Implicit অ -> '
+    <hr/>
+    <a href="#" id="getFull">click for full Bengali IPA reference</a><br/>
+    <span id="fullList"></span>
+  </div>
+  <footer>
+    &copy; 2014, <a href="http://nafSadh.com">nafSadh</a>; All rights reserved.<br/>
+    Available to use under BSD license, Fork on Github: <a href="https://github.com/nafSadh/bnIPA">nafSadh/bnIPA</a>
+  </footer>
+</div>
+</body>
+</html>
