@@ -1,4 +1,4 @@
 bnXlit
 ======
 
-Tool Romanization of Bengali
+Bengali Romanization Tool

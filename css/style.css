@@ -4,7 +4,7 @@ html, body {
 }
 body {text-align: center;}
 #content {display: inline-block;}
-#converter {padding: 8pt; background:#eee; text-align: left;}
+#converter {padding: 8pt; background:#eee; text-align: left; border: 4px solid #e0e8ef;}
 #converter hr {border: none; border-bottom: 1px solid #ccc;}
 .rowTitle {width:50pt; display: inline-block;}
 .rowField{width: 300pt; background: #f8f8f8;
