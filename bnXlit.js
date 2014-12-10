@@ -12,13 +12,20 @@ var BN_XLIT = {
   'শ':'sh', 'ষ':'ṣ', 'স':'s', 'হ':'h',
   'ড়':'ṛ', 'ঢ়':'ṛh', 'য়':'y',
   'ৎ':'t', 'ং':'ng', 'ঃ':'ḥ','ঁ':'◌̃',
-  '\'':'a', '@':'æ', ':':'ô'
+  '\'':'a', '@':'æ', ':':'ô', '্য':'ya', '্যা':'æ'
 };
 
 function bnXlit(bengali){
   var xlit=""
   for (var i = 0, len = bengali.length; i < len; i++) {
     b = bengali[i];
+    if(b==='্' && bengali[i+1]==='য'){
+      i++;
+      b = '্য';
+      if(bengali[i+1]==='া'){
+        i++; b = '্যা';
+      }
+    }
     if (b in BN_XLIT) x = BN_XLIT[b];
     else x = b;
     xlit+=x;
