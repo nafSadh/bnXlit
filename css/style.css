@@ -15,8 +15,8 @@ body {text-align: center;}
 }
 #fullList {width: 382pt; display: inline-block;}
 .ref {display: inline-block; padding: 2pt 8pt; border: 1px solid #ddd;}
-.bn, .ipa {width: 15pt; display: inline-block; text-align: center;}
-.bn {color: darkgreen;} .ipa {color: steelblue;}
+.bn, .xt {width: 15pt; display: inline-block; text-align: center;}
+.bn {color: darkgreen;} .xt {color: steelblue;}
 footer{
   margin: 16pt 0;
 }
