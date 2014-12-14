@@ -155,7 +155,7 @@ var BANJON = [
   'শ', 'ষ', 'স', 'হ', 'ড়', 'ঢ়', 'য়'];
 var KAAR = ['\'', ':', '্', 'া', 'ি', 'ী', 'ু', 'ূ',
   'ৃ', 'ৄ', 'ৢ', 'ৣ', 'ে', 'ৈ', 'ো', 'ৌ', '+', '\''];
-মনরর
+
 function bnXlit(bengali, xlitMap, inherent){
   for (var special in SPECIALS){
     bengali = replaceAll(special,SPECIALS[special],bengali);
