@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="css/style.css">
   <title>bnXlit -- Bengali Romanization Tool by nafSadh</title>
   <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+  <script src="nafSadh.lib.js"></script>
   <script src="bnXlit.js"></script>
   <script type="application/javascript">
     $(document).ready(function () {
       $("#bn").change(function(){
         var bntx = $("#bn").val();
-        $("#xlit").text(bnXlit(bntx));
+        $("#xlit").text(bnXlit(bntx, BN_XLIT, 'a'));
       });
       $("#getFull").click(function(){
         $("#fullList").html(bnXlitRef());
