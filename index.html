@@ -11,15 +11,22 @@
   <script src="bnXlit.js"></script>
   <script type="application/javascript">
     $(document).ready(function () {
-      $("#bn").change(function(){
-        var bntx = $("#bn").val();
-        $("#xlit").text(bnXlit(bntx, BN_XLIT, 'a'));
-      });
+      $("#bn").keyup(xlitFunc);
+      $("#bn").change(xlitFunc);
       $("#getFull").click(function(){
         $("#fullList").html(bnXlitRef());
         $("#getFull").text("Bengali Transliteration reference")
       });
     });
+    function xlitFunc(){
+      var bntx = $("#bn").val();
+      $("#xlit").text(bnXlit(bntx, BN_XLIT, 'ô'));
+      $("#ba").text(bnXlit(bntx, BN_XLIT_BA, 'a'));
+      $("#ba2").text(bnXlit(bntx, BN_XLIT_BA2, 'a'));
+      $("#iso").text(bnXlit(bntx, BN_XLIT_ISO, 'a'));
+      $("#nlk").text(bnXlit(bntx, BN_XLIT_NLK, 'a'));
+      $("#iast").text(bnXlit(bntx, BN_XLIT_IAST, 'a'));
+    }
   </script>
 </head>
 <body align="center">
@@ -28,9 +35,19 @@
   <h2>Bengali Romanization Tool</h2>
   <div id="converter">
     <span class="rowTitle">বাংলা:</span>
-    <input id="bn" class="rowField"/><br/>
+      <input id="bn" class="rowField"/><br/>
     <span class="rowTitle">Xlit:</span>
-    <span id="xlit" class="rowField"></span>
+      <span id="xlit" class="rowField"></span><br/>
+    <span class="rowTitle"><a href="" title="Bangla Academy">B.A.:</a></span>
+      <span id="ba" class="rowField"></span><br/>
+    <span class="rowTitle"><a href="" title="Bangla Academy (alternative)">BA(alt):</a></span>
+      <span id="ba2" class="rowField"></span><br/>
+    <span class="rowTitle"><a href="http://en.wikipedia.org/wiki/ISO_15919" title="ISO_15919">ISO:</a></span>
+      <span id="iso" class="rowField"></span><br/>
+    <span class="rowTitle"><a href="http://en.wikipedia.org/wiki/National Library at Kolkata romanization" title="National Library at Kolkata romanization">NLK</a></span>
+      <span id="nlk" class="rowField"></span><br/>
+    <span class="rowTitle"><a href="http://en.wikipedia.org/wiki/IAST" title="International Alphabet of Sanskrit Transliteration">IAST</a></span>
+      <span id="iast" class="rowField"></span><br/>
     <br/><hr/>
     Specials: ্যা -> @,  Implicit অ -> '
     <hr/>

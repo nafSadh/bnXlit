@@ -20,3 +20,6 @@ body {text-align: center;}
 footer{
   margin: 16pt 0;
 }
+small{font-size: 10pt; line-height: 11pt !important;}
+
+a {text-decoration: none; color: inherit!important;}
