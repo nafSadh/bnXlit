@@ -27,6 +27,9 @@
       $("#nlk").text(bnXlit(bntx, BN_XLIT_NLK, 'a'));
       $("#iast").text(bnXlit(bntx, BN_XLIT_IAST, 'a'));
       $("#itrans").text(bnXlit(bntx, BN_XLIT_ITRANS, 'a'));
+      $("#anglo").text(bnXlit(bntx, BN_Anglicize, 'ô'));
+      $("#devng").text(bnXlit(bntx, BN_DEVNG, ''));
+      $("#arb").text(bnXlit(bntx, BN_PERSO_ARABIC, ''));
     }
   </script>
 </head>
@@ -50,7 +53,15 @@
     <span class="rowTitle"><a href="http://en.wikipedia.org/wiki/IAST" title="International Alphabet of Sanskrit Transliteration">IAST</a></span>
       <span id="iast" class="rowField"></span><br/>
     <span class="rowTitle"><a href="http://en.wikipedia.org/wiki/ITRANS" title="Indian languages TRANSliteration (ASCII)">ITRANS</a></span>
-      <span id="itrans" class="rowField"></span><br/>
+    <span id="itrans" class="rowField"></span><br/>
+    <span class="rowTitle"><a title="suggested anglicisation (English form)">Anglic<sup>n</sup></a></span>
+      <span id="anglo" class="rowField"></span><br/>
+    <div id="moreLang">
+      <span class="rowTitle"><a title="Sanskrit (in Devnagari Lipi)">Sanskrit</a></span>
+        <span id="devng" class="rowField"></span><br/>
+      <span class="rowTitle"><a title="Sanskrit (in Devnagari Lipi)">Arabic</a></span>
+        <span id="arb" class="rowField"></span><br/>
+    </div>
     <br/><hr/>
     Specials: ্যা -> @,  Implicit ্‌ -> '
     <hr/>
